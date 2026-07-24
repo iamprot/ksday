@@ -8,7 +8,7 @@ const scrollToSection = (id: string) => {
 </script>
 
 <template>
-    <div class="flex flex-col min-h-90 items-center bg-pale">
+    <div class="flex flex-col min-h-90 items-center bg-pale mx-auto">
         <header
             class="sticky top-0 z-50 w-full min-h-25 bg-white/60 backdrop-blur-2xl border-b border-slate-600/15 pt-6"
         >
@@ -39,7 +39,7 @@ const scrollToSection = (id: string) => {
             </div>
         </header>
 
-        <main class="px-4">
+        <main class="px-4 overflow-hidden md:overflow-visible">
             <slot />
         </main>
 

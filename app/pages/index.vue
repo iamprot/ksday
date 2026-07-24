@@ -20,7 +20,7 @@ useHead({
 </script>
 
 <template>
-    <main class="flex flex-col justify-center items-center">
+    <main class="flex flex-col">
         <AppHero />
         <AppAbout />
         <AppStats />

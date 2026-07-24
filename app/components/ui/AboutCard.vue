@@ -18,7 +18,7 @@ const props = defineProps<Props>();
         <div class="text-dark text-balance leading-7 w-3/4">
             <span>{{ description }}</span>
         </div>
-        <div class="absolute -right-5 bottom-3 w-43 shrink-0 group-hover:scale-105 transition-all duration-300">
+        <div class="absolute -right-5 bottom-4 w-32 md:w-43 shrink-0 group-hover:scale-105 transition-all duration-300">
             <img :src="`images/${image}`" />
         </div>
     </div>

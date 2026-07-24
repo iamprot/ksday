@@ -11,7 +11,6 @@
             v-motion-pop-bottom
             :duration="200"
         >
-            <UiCircle class="absolute -left-64 -top-64 overflow-hidden" />
             <div
                 class="z-2 flex flex-col gap-8 items-center justify-center text-center"
             >

@@ -35,7 +35,7 @@ const scrollToSection = (id: string) => {
                     <UiTagline label="Ежегодная конференция Knowledge Space" />
                     <h1 class="flex items-end py-4 gap-2">
                         <span
-                            class="text-dark font-black text-[52px]/13 md:text-[96px]/18 tracking-tight"
+                            class="text-dark font-black text-[52px]/13 md:text-[96px]/18 tracking-tighter"
                             >KS DAY</span
                         >
                         <span class="text-light font-black text-[96px]/18"

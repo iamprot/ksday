@@ -1,14 +1,11 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 <template>
     <div>
-        <!-- <NuxtLoadingIndicator
-            class="absolute top-0 left-0 z-20"
+        <NuxtLoadingIndicator
             :throttle="10"
-            :duration="2000"
-            color="var(--color-primary)"
-            :height="5"
-        /> -->
+            color="#ff0000"
+            :height="25"
+        />
         <NuxtLayout>
             <NuxtPage />
         </NuxtLayout>
@@ -16,4 +13,18 @@
 </template>
 
 <style>
+.page-enter-active,
+.page-leave-active {
+    transition: all 0.5s;
+}
+
+.page-leave-to {
+    opacity: 0;
+    transform: translateY(-5px);
+}
+
+.page-enter-from {
+    opacity: 0;
+    transform: translateY(5px);
+}
 </style>
