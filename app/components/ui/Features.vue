@@ -20,11 +20,11 @@ const features = [
         <div
             v-for="(feature, idx) in features"
             :key="idx"
-            class="flex flex-col gap-6 bg-white p-8 rounded-smooth w-full items-center justify-start"
+            class="flex flex-col gap-6 bg-white p-6 md:p-8 rounded-smooth w-full items-center justify-start"
             v-motion-pop-bottom
             :delay="idx * 200"
         >
-            <div class="text-7xl font-medium text-primary">
+            <div class="text-5xl md:text-7xl font-medium text-primary">
                 {{ feature.amount }}
             </div>
             <div class="text-center">{{ feature.description }}</div>

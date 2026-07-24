@@ -22,12 +22,12 @@ const scrollToSection = (id: string) => {
                 <nav class="flex gap-6 items-center">
                     <a href="https://im.systems" class="hidden min-[660px]:flex">
                         <div
-                            class="group flex items-center gap-2 py-3 px-6 rounded-full bg-slate-300/30 hover:bg-white border-2 border-dashed border-slate-400/40 transition-colors duration-300 ease-in"
+                            class="group flex items-center gap-2 py-3 px-6 rounded-full bg-slate-300/30 hover:bg-white border-2 border-slate-400/30 transition-colors duration-300 ease-in"
                         >
-                            <Icon name="solar:hashtag-bold" size="20" class="group-hover:text-primary" />
+                            <!-- <Icon name="solar:hashtag-bold" size="20" class="group-hover:text-primary" /> -->
                             <span
-                                class="uppercase text-sm font-mono group-hover:text-primary font-semibold"
-                                >О Knowldge Space</span
+                                class="text-base font-medium group-hover:text-primary"
+                                >О Knowledge Space</span
                             >
                         </div>
                     </a>

@@ -41,8 +41,14 @@ const handleSubmit = async () => {
 
     isSubmitting.value = true;
     try {
-        // Имитация запроса (замените на ваш API)
+
+        // await $fetch("/api/formPost", {
+        //     method: "POST",
+        //     body: form.value,
+        // });
+
         await new Promise((resolve) => setTimeout(resolve, 1000));
+
         isSubmitted.value = true;
         isModalOpen.value = true;
     } finally {
@@ -242,12 +248,7 @@ const closeModal = () => {
                             Ожидайте уведомления на почту
                         </p>
 
-                        <button
-                            @click="closeModal"
-                            class="w-full bg-accent text-white font-medium py-3.5 rounded-full hover:bg-primary transition hover:cursor-pointer"
-                        >
-                            Закрыть
-                        </button>
+                        <UiBaseButton label="Закрыть" @click="closeModal" />
                     </div>
                 </div>
             </Transition>

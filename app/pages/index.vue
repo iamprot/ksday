@@ -1,5 +1,22 @@
 <script setup lang="ts">
+useSeoMeta({
+    title: "KS Day 2026 | ОФициальная страница мероприятия",
+    description: "Главное событие года для тех, кто планирует: кейсы заказчиков Knowledge Space, новые технологии платформы и искусственный интеллект и многое другое",
+    ogTitle: "KS Day 2026",
+    ogDescription: "Главное событие года для тех, кто планирует: кейсы заказчиков Knowledge Space, новые технологии платформы и искусственный интеллект, награждение лучших проектов и вечер живого общения.",
+    ogImage: "",
+    ogUrl: "https://ksday2026.im.systems",
+    robots: "follow"
+});
 
+useHead({
+    link: [
+        {
+            rel: "canonical",
+            href: "https://ksday2026.im.systems",
+        },
+    ],
+});
 </script>
 
 <template>

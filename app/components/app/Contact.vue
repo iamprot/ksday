@@ -1,4 +1,8 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+useHead({
+    script: [{ src: "https://forms.yandex.ru/_static/embed.js" }],
+});
+</script>
 
 <template>
     <section class="relative w-full" id="contact">
@@ -30,11 +34,17 @@
                     v-motion-pop-bottom
                     :delay="600"
                 >
-                    Участие бесплатное, количество мест ограничено.<br />Оставьте
-                    заявку — подтверждение придёт на почту.
+                    Участие бесплатное, количество мест ограничено.<br />Мы
+                    рассмотрим вашу заявку и направим ответ на почту.
                 </div>
             </div>
             <UiForm />
+            <iframe
+                src="https://forms.yandex.ru/cloud/6a6384c102848f85d122f5ea?iframe=1"
+                frameborder="0"
+                name="ya-form-6a6384c102848f85d122f5ea"
+                width="650"
+            ></iframe>
         </div>
     </section>
 </template>

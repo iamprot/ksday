@@ -25,8 +25,12 @@ const logos = [
 
 <template>
     <div>
-        <div class="text-3xl font-bold text-center my-8">
-            С нами c 2025 года
+        <div
+            class="text-3xl font-bold text-center my-8"
+            v-motion-pop-bottom
+            :delay="200"
+        >
+            Участники 2025 года
         </div>
         <div
             class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 items-center justify-center"
@@ -34,7 +38,7 @@ const logos = [
             <div
                 v-for="(logo, idx) in logos"
                 :key="idx"
-                class="text-center p-4 min-h-10 rounded-lg py-8 md:py-12 shrink-0 bg-center bg-no-repeat opacity-60 hover:opacity-100 transition-opacity duration-300 ease-in"
+                class="text-center p-4 h-4 md:h-10! rounded-lg py-8 md:py-12 shrink-0 bg-center bg-no-repeat transition-opacity duration-300 ease-in"
                 :style="{ backgroundImage: `url(logos/${logo}.png)` }"
                 v-motion-pop-bottom
                 :delay="idx * 16"

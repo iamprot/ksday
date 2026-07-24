@@ -38,7 +38,7 @@ const photos = [
             <img
                 :src="photo.source"
                 :alt="photo.description"
-                class="w-full h-full object-cover transition-transform duration-400 ease-in hover:scale-102"
+                class="w-full h-full object-cover transition-transform duration-300 ease-in hover:scale-102"
             />
         </div>
     </div>
