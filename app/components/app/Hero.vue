@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const colorMode = useColorMode();
 const tags = [
     {
         icon: "solar:calendar-minimalistic-linear",
@@ -41,7 +42,8 @@ const scrollToSection = (id: string) => {
                         <span class="text-light font-thin text-[96px]/18"
                             >/</span
                         >
-                        <span class="text-accent font-extrabold text-[32px]/10 md:text-[48px]/10"
+                        <span
+                            class="text-accent font-extrabold text-[32px]/10 md:text-[48px]/10"
                             >2026</span
                         >
                     </h1>
@@ -91,7 +93,8 @@ const scrollToSection = (id: string) => {
                     :delay="300"
                 />
             </div>
-            <UiHeroImage
+            <UiHeroImageDark
+                v-if="colorMode.value === 'dark'"
                 class="absolute hidden md:block h-[120%] right-[10%] top-[-10%]"
                 v-motion-fade-visible-once
                 :duration="400"
@@ -99,7 +102,7 @@ const scrollToSection = (id: string) => {
                 :initial="{
                     x: -100,
                     scale: 0.8,
-                    opacity: 0
+                    opacity: 0,
                 }"
                 :enter="{
                     x: 0,
@@ -107,7 +110,27 @@ const scrollToSection = (id: string) => {
                     opacity: 1,
                     transition: {
                         ease: 'easeOut',
-                    }
+                    },
+                }"
+            />
+            <UiHeroImageLight
+                v-if="colorMode.value === 'light' || null"
+                class="absolute hidden md:block h-[120%] right-[10%] top-[-10%]"
+                v-motion-fade-visible-once
+                :duration="400"
+                :delay="200"
+                :initial="{
+                    x: -100,
+                    scale: 0.8,
+                    opacity: 0,
+                }"
+                :enter="{
+                    x: 0,
+                    scale: 1,
+                    opacity: 1,
+                    transition: {
+                        ease: 'easeOut',
+                    },
                 }"
             />
         </div>
