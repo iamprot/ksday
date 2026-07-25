@@ -12,7 +12,7 @@
                 cy="361"
                 r="361"
                 fill="url(#paint0_radial_2067_28)"
-                fill-opacity="0.20"
+                fill-opacity="0.15"w
             />
             <defs>
                 <radialGradient
