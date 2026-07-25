@@ -22,7 +22,7 @@ const features = [
         <div
             v-for="(item, idx) in features"
             :key="idx"
-            class="flex flex-col gap-6 bg-white dark:bg-gray-900/60 border border-gray-300/50 dark:border dark:border-gray-800 p-6 md:p-8 rounded-smooth w-full items-center justify-start"
+            class="flex flex-col gap-2 bg-white dark:bg-gray-900/60 border border-gray-300/50 dark:border dark:border-gray-800 p-6 md:p-8 rounded-smooth w-full items-center justify-start"
             v-motion-pop-bottom
             :delay="idx * 200"
         >
