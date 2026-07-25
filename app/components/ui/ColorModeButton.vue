@@ -47,7 +47,7 @@ const startViewTransition = (event: MouseEvent) => {
 
 <template>
   <ClientOnly>
-    <button class="flex items-center hover:bg-slate-200 dark:hover:bg-slate-800 p-1.5 rounded-lg cursor-pointer transition-colors duration-300" @click="startViewTransition">
+    <button class="flex items-center hover:bg-gray-100 dark:hover:bg-slate-800/50 p-1.5 rounded-lg cursor-pointer transition-colors duration-300" @click="startViewTransition">
       <ColorScheme placeholder="...">
         <Icon :name="colorMode.value === 'dark' ? 'material-symbols:sunny-outline' : 'material-symbols:dark-mode-outline'" size="20" />
       </ColorScheme>

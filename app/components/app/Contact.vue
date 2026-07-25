@@ -1,7 +1,4 @@
 <script setup lang="ts">
-// useHead({
-//     script: [{ src: "https://forms.yandex.ru/_static/embed.js" }],
-// });
 </script>
 
 <template>
@@ -38,12 +35,6 @@
                 </div>
             </div>
             <UiForm />
-            <!-- <iframe
-                src="https://forms.yandex.ru/cloud/6a6384c102848f85d122f5ea?iframe=1"
-                frameborder="0"
-                name="ya-form-6a6384c102848f85d122f5ea"
-                width="650"
-            ></iframe> -->
         </div>
     </section>
 </template>

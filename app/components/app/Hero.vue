@@ -100,12 +100,10 @@ const scrollToSection = (id: string) => {
                 :duration="400"
                 :delay="200"
                 :initial="{
-                    x: -100,
                     scale: 0.8,
                     opacity: 0,
                 }"
                 :enter="{
-                    x: 0,
                     scale: 1,
                     opacity: 1,
                     transition: {
@@ -120,12 +118,10 @@ const scrollToSection = (id: string) => {
                 :duration="400"
                 :delay="200"
                 :initial="{
-                    x: -100,
                     scale: 0.8,
                     opacity: 0,
                 }"
                 :enter="{
-                    x: 0,
                     scale: 1,
                     opacity: 1,
                     transition: {

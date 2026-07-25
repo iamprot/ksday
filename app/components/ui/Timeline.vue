@@ -10,14 +10,14 @@ const events = [
         title: "Пленарная сессия",
         description:
             "Открытие KS DAY 2026, ключевые итоги и планы Knowledge Space. Новые возможности платформы и сценарии применения искусственного интеллекта в планировании.",
-        badge: "программа в разработке",
+        badge: "Программа в разработке",
     },
     {
         time: "16:00",
         title: "Кейсы заказчиков",
         description:
             "Практика внедрений в FMCG, металлургии, ритейле и других отраслях.",
-        badge: "программа в разработке",
+        badge: "Программа в разработке",
     },
     {
         time: "18:00",
@@ -54,7 +54,7 @@ const events = [
                     {{ event.title }}
                     <span
                         v-if="event.badge?.length"
-                        class="inline-block shrink-0 bg-white dark:bg-gray-800 px-2 pb-4.5 pt-1 h-5 rounded-full border border-primary/50 dark:border-gray-700 text-primary dark:text-light text-[12px] uppercase font-normal"
+                        class="inline-block shrink-0 bg-white dark:bg-gray-800 px-2 pb-4.5 pt-1 h-5 rounded-full border border-primary/50 dark:border-gray-700 text-primary dark:text-light text-[12px] font-medium"
                         >{{ event.badge }}</span
                     >
                 </div>

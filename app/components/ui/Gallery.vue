@@ -38,7 +38,7 @@ const photos = [
             :class="idx === 0 ? 'md:row-span-2' : ''"
             class="relative overflow-hidden rounded-2xl"
             v-motion-pop-bottom
-            :delay="idx * 200"
+            :delay="idx * 100"
         >
             <img
                 v-if="item.type === 'image'"

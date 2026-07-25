@@ -1,7 +1,4 @@
 <template>
-   
-   
-
     <svg
         width="694"
         height="689"
@@ -33,6 +30,4 @@
             />
         </g>
     </svg>
-
-    
 </template>

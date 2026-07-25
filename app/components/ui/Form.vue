@@ -166,7 +166,7 @@ const closeModal = () => {
                             <span class="text-[12px] text-white leading-snug">
                                 Даю согласие на обработку персональных данных и
                                 соглашаюсь с&nbsp;<a
-                                    href="#"
+                                    href="https://im.systems/about/policy/" target="_blank"
                                     class="underline text-light hover:text-white transition"
                                     >политикой обработки персональных данных</a
                                 >
@@ -202,7 +202,6 @@ const closeModal = () => {
                                 />
                             </svg>
 
-                            <!-- Динамический текст кнопки -->
                             <span v-if="isSubmitted">Отправлено</span>
                             <span v-else-if="isSubmitting">Отправка...</span>
                             <span v-else>Отправить заявку</span>
@@ -212,7 +211,7 @@ const closeModal = () => {
             </div>
         </div>
 
-        <!-- Модальное окно -->
+        <!-- modalku v top -->
         <Teleport to="body">
             <Transition name="modal">
                 <div
@@ -269,8 +268,6 @@ const closeModal = () => {
     z-index: 1;
     user-select: none;
     cursor: pointer;
-    /*** full width block ***/
-    /* width: 100%; */
 }
 
 .btn__submit-colors {
@@ -326,7 +323,6 @@ const closeModal = () => {
     background: #dcdcdc;
 }
 
-/* Анимация модального окна */
 .modal-enter-active,
 .modal-leave-active {
     transition: opacity 0.3s ease;
