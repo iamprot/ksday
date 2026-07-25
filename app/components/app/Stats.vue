@@ -13,7 +13,7 @@
                     :delay="200"
                 />
                 <UiHeadline
-                    label="KS DAY 2025 в цифрах и кадрах"
+                    label="KS DAY 2025 в цифрах и кадрах"
                     v-motion-pop-bottom
                     :delay="200"
                 />

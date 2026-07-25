@@ -4,7 +4,7 @@ import { ref, computed } from "vue";
 interface FormData {
     fullName: string;
     company: string;
-    position: string;
+    jobTitle: string;
     email: string;
     agreed: boolean;
     honeypot: string;
@@ -13,7 +13,7 @@ interface FormData {
 const form = ref<FormData>({
     fullName: "",
     company: "",
-    position: "",
+    jobTitle: "",
     email: "",
     agreed: false,
     honeypot: "",
@@ -29,7 +29,7 @@ const isFormValid = computed(() => {
     return (
         form.value.fullName.trim() !== "" &&
         form.value.company.trim() !== "" &&
-        form.value.position.trim() !== "" &&
+        form.value.jobTitle.trim() !== "" &&
         /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.value.email) &&
         form.value.agreed
     );
@@ -41,13 +41,10 @@ const handleSubmit = async () => {
 
     isSubmitting.value = true;
     try {
-
-        // await $fetch("/api/formPost", {
-        //     method: "POST",
-        //     body: form.value,
-        // });
-
-        await new Promise((resolve) => setTimeout(resolve, 1000));
+        await $fetch("/api/formPost", {
+            method: "POST",
+            body: form.value,
+        });
 
         isSubmitted.value = true;
         isModalOpen.value = true;
@@ -58,8 +55,14 @@ const handleSubmit = async () => {
 
 const closeModal = () => {
     isModalOpen.value = false;
-    // Опционально: очистить форму после закрытия
-    // form.value = { fullName: '', company: '', position: '', email: '', agreed: false, honeypot: '' };
+    form.value = {
+        fullName: "",
+        company: "",
+        jobTitle: "",
+        email: "",
+        agreed: false,
+        honeypot: "",
+    };
 };
 </script>
 
@@ -72,21 +75,18 @@ const closeModal = () => {
         <div
             class="relative flex flex-col lg:flex-row gap-8 rounded-[32px] bg-white/10 border border-light/20 overflow-hidden"
         >
-            <!-- Фоновое изображение -->
             <div
                 class="absolute -right-20 -top-10 hidden md:block md:w-100 md:h-100 bg-[url('/email.png')] bg-contain bg-top-right bg-no-repeat opacity-30 pointer-events-none z-0"
                 aria-hidden="true"
             ></div>
 
-            <!-- Контейнер формы -->
             <div
-                class="flex flex-col justify-center p-8 md:p-12 w-full md:w-[90%] z-20"
+                class="flex flex-col justify-center p-5 md:p-12 w-full md:w-[90%] z-20"
             >
                 <form
                     @submit.prevent="handleSubmit"
                     class="flex flex-col gap-4"
                 >
-                    <!-- Honeypot (вынесен из grid для безопасности) -->
                     <input
                         type="text"
                         name="formId"
@@ -111,7 +111,7 @@ const closeModal = () => {
                             class="w-full bg-white rounded-2xl px-5 py-4 text-base text-gray-900 placeholder:text-gray-500 outline-none focus:ring-4 focus:ring-white/60 transition"
                         />
                         <input
-                            v-model="form.position"
+                            v-model="form.jobTitle"
                             type="text"
                             placeholder="Должность"
                             class="w-full bg-white rounded-2xl px-5 py-4 text-base text-gray-900 placeholder:text-gray-500 outline-none focus:ring-4 focus:ring-white/60 transition"
@@ -124,7 +124,7 @@ const closeModal = () => {
                         />
                     </div>
 
-                    <!-- Сабмит -->
+                    <!-- пофиксить ширину мэйби -->
                     <div
                         class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 mt-4"
                     >

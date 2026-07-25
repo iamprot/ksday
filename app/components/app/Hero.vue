@@ -35,13 +35,13 @@ const scrollToSection = (id: string) => {
                     <UiTagline label="Ежегодная конференция Knowledge Space" />
                     <h1 class="flex items-end py-4 gap-2">
                         <span
-                            class="text-dark font-black text-[52px]/13 md:text-[96px]/18 tracking-tighter"
+                            class="text-dark dark:text-white font-black text-[50px]/13 md:text-[96px]/18 tracking-tighter"
                             >KS DAY</span
                         >
-                        <span class="text-light font-black text-[96px]/18"
+                        <span class="text-light font-thin text-[96px]/18"
                             >/</span
                         >
-                        <span class="text-accent font-extrabold text-[48px]/10"
+                        <span class="text-accent font-extrabold text-[32px]/10 md:text-[48px]/10"
                             >2026</span
                         >
                     </h1>
@@ -59,7 +59,7 @@ const scrollToSection = (id: string) => {
                     />
                 </div>
                 <p
-                    class="z-1 text-dark text-balance text-center md:text-start leading-8 md:leading-9 text-base md:text-xl w-full md:w-3/4"
+                    class="z-1 font-extralight text-dark dark:text-white/90 text-balance text-center md:text-start leading-8 md:leading-9 text-base md:text-xl w-full md:w-3/4"
                     v-motion-pop-bottom
                     :delay="200"
                 >

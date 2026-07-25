@@ -4,11 +4,12 @@ export default defineNuxtConfig({
     compatibilityDate: "2025-07-15",
     devtools: { enabled: false },
     modules: [
-        "@nuxt/eslint",
-        "@nuxtjs/google-fonts",
-        "@nuxt/icon",
-        "@nuxt/image",
-        "@vueuse/motion/nuxt",
+      "@nuxt/eslint",
+      "@nuxtjs/google-fonts",
+      "@nuxt/icon",
+      "@nuxt/image",
+      "@vueuse/motion/nuxt",
+      "@nuxtjs/color-mode",
     ],
     app: {
         head: {
@@ -22,8 +23,9 @@ export default defineNuxtConfig({
         pageTransition: { name: "page", mode: "out-in" },
     },
     runtimeConfig: {
-        yandexFormsToken: process.env.NUXT_YANDEX_FORMS_TOKEN,
+        yandexUserToken: process.env.NUXT_YANDEX_FORMS_TOKEN,
         yandexFormId: process.env.NUXT_YANDEX_FORM_ID,
+        yandexOrgId: process.env.NUXT_YANDEX_ORG_ID,
     },
     motion: {
         directives: {
@@ -48,8 +50,7 @@ export default defineNuxtConfig({
     },
     googleFonts: {
         families: {
-            Onest: "200..900",
+            Onest: "100..900",
         },
     },
 });
-

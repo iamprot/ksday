@@ -9,13 +9,13 @@ const scrollToSection = (id: string) => {
 
 <template>
     <footer
-        class="w-full flex flex-col gap-16 mx-40 px-4 justify-center items-center py-16 bg-black text-white"
+        class="w-full flex flex-col gap-16 mx-40 px-4 justify-center items-center py-16 bg-[#1B1E27] text-white"
     >
         <div
             class="flex flex-col md:flex-row justify-between w-full max-w-7xl gap-12"
         >
             <div class="flex gap-6 flex-col items-center md:items-start">
-                <div><UiKsLogo color="white" /></div>
+                <div><UiKsLogoWhite color="white" /></div>
                 <div class="text-white/70 text-center md:text-start">
                     Российская no-code платформа<br />
                     для интегрированного бизнес-планирования.
@@ -80,7 +80,7 @@ const scrollToSection = (id: string) => {
             class="flex flex-row w-full max-w-7xl justify-between text-sm text-white/40"
         >
             <span>&copy; 2026 Knowledge Space.<br />Все права защищены.</span>
-            <span>KS Day 2026 · 30 сентября · Москва</span>
+            <span class="text-right">KS Day 2026 · 30 сентября · Москва</span>
         </div>
     </footer>
 </template>

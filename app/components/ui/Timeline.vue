@@ -42,21 +42,25 @@ const events = [
             v-motion-pop-bottom
             :delay="idx * 100"
         >
-            <div class="text-primary font-bold text-3xl md:text-5xl">
+            <div
+                class="text-primary dark:text-accent font-bold text-3xl md:text-5xl"
+            >
                 {{ event.time }}
             </div>
             <div class="flex flex-col gap-5">
                 <div
-                    class="text-dark font-bold text-2xl flex gap-4 items-center"
+                    class="text-dark dark:text-white font-medium text-2xl flex gap-4 items-center"
                 >
                     {{ event.title }}
                     <span
                         v-if="event.badge?.length"
-                        class="inline-block shrink-0 bg-white px-2 pb-1 h-5 rounded-full border border-primary/50 text-primary text-[14px] uppercase font-normal"
+                        class="inline-block shrink-0 bg-white dark:bg-gray-800 px-2 pb-4.5 pt-1 h-5 rounded-full border border-primary/50 dark:border-gray-700 text-primary dark:text-light text-[12px] uppercase font-normal"
                         >{{ event.badge }}</span
                     >
                 </div>
-                <div>{{ event.description }}</div>
+                <div class="text-dark dark:text-white/60">
+                    {{ event.description }}
+                </div>
             </div>
         </div>
     </div>

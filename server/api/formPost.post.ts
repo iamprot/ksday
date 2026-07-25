@@ -8,31 +8,29 @@ export default defineEventHandler(async (event) => {
         }
 
         const config = useRuntimeConfig();
-        const token = config.yandexFormsToken;
+        const token = config.yandexUserToken;
         const formId = config.yandexFormId;
+        const orgId = config.yandexOrgId;
 
         const yandexApiUrl = `https://api.forms.yandex.net/v1/surveys/${formId}/form`;
 
         const yandexPayload = {
-                "answer_short_text_9008984161690764": body.name,
-                "answer_short_text_9008984161703324": body.company,
-                // ksJobTitle: body.status,
-                // ksEmail: body.email,
+                "answer_short_text_9008984237583412": body.fullName,
+                "answer_short_text_9008984237603772": body.company,
+                "answer_short_text_9008984237631278": body.jobTitle,
+                "answer_short_text_9008984237648854": body.email,
         };
 
         const response = await $fetch(yandexApiUrl, {
             method: "POST",
             headers: {
-                // Host: `api.forms.yandex.net`,
                 Authorization: `OAuth ${token}`,
-                // "X-Org-Id": `asldkasd`
-                "Content-Type": "application/json",
+                'X-Org-Id': orgId,
+                'Content-Type': 'application/json',
             },
             body: yandexPayload,
         });
 
-        console.log(response)
-    
         return {
             success: true,
             message: "Заявка успешно отправлена",

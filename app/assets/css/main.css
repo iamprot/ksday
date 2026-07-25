@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
     --breakpoint-2xl: 1536px;
@@ -41,6 +42,11 @@ body {
     -moz-osx-font-smoothing: grayscale;
     /* font-smooth: always; */
     @apply bg-[#F5F8FF];
+}
+
+.dark body {
+  @apply bg-black;
+  color: #ebf4f1;
 }
 
 /* scroll bar */

@@ -26,20 +26,20 @@ const logos = [
 <template>
     <div>
         <div
-            class="text-3xl font-bold text-center my-8"
+            class="text-3xl font-medium text-center my-8"
             v-motion-pop-bottom
             :delay="200"
         >
             Участники 2025 года
         </div>
         <div
-            class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 items-center justify-center"
+            class="z-10 grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 items-center justify-center"
         >
             <div
                 v-for="(logo, idx) in logos"
                 :key="idx"
-                class="text-center p-4 h-4 md:h-10! rounded-lg py-8 md:py-12 shrink-0 bg-center bg-no-repeat transition-opacity duration-300 ease-in"
-                :style="{ backgroundImage: `url(logos/${logo}.png)` }"
+                :style="{ backgroundImage: `url(logos/${logo}.png)`, opacity: 0.7 }"
+                class="rounded-lg py-8 md:py-12 shrink-0 bg-center bg-no-repeat md:bg-auto bg-size-[auto_32px] opacity-20 transition-opacity duration-300 ease-in"
                 v-motion-pop-bottom
                 :delay="idx * 16"
             ></div>
