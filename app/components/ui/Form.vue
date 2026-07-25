@@ -102,24 +102,31 @@ const closeModal = () => {
                             v-model="form.fullName"
                             type="text"
                             placeholder="Имя Фамилия"
+                            maxlength="96"
+                            required
                             class="w-full bg-white rounded-2xl px-5 py-4 text-base text-gray-900 placeholder:text-gray-500 outline-none focus:ring-4 focus:ring-white/60 transition"
                         />
                         <input
                             v-model="form.company"
                             type="text"
                             placeholder="Название компании"
+                            maxlength="128"
+                            required
                             class="w-full bg-white rounded-2xl px-5 py-4 text-base text-gray-900 placeholder:text-gray-500 outline-none focus:ring-4 focus:ring-white/60 transition"
                         />
                         <input
                             v-model="form.jobTitle"
                             type="text"
                             placeholder="Должность"
+                            maxlength="96"
+                            required
                             class="w-full bg-white rounded-2xl px-5 py-4 text-base text-gray-900 placeholder:text-gray-500 outline-none focus:ring-4 focus:ring-white/60 transition"
                         />
                         <input
                             v-model="form.email"
                             type="email"
                             placeholder="Email"
+                            required
                             class="w-full bg-white rounded-2xl px-5 py-4 text-base text-gray-900 placeholder:text-gray-500 outline-none focus:ring-4 focus:ring-white/60 transition"
                         />
                     </div>
