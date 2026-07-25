@@ -29,7 +29,7 @@ const features = [
             <div class="text-5xl md:text-7xl font-medium text-primary dark:text-light">
                 {{ item.amount }}+
             </div>
-            <div class="text-center text-white/70 font-light" v-html="item.description"></div>
+            <div class="text-center text-dark dark:text-white/70 font-light" v-html="item.description"></div>
         </div>
     </div>
 </template>
