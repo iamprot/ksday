@@ -23,9 +23,9 @@ export default defineNuxtConfig({
         pageTransition: { name: "page", mode: "out-in" },
     },
     runtimeConfig: {
-        yandexUserToken: process.env.NUXT_YANDEX_FORMS_TOKEN,
-        yandexFormId: process.env.NUXT_YANDEX_FORM_ID,
-        yandexOrgId: process.env.NUXT_YANDEX_ORG_ID,
+        yandexUserToken: 'y0__wgBEO_RnqCq94ACGL2LRiD18eu0GDgC4OKsnbEi_vMmq0tZhFjbL7pw',
+        yandexFormId: '6a64ad37068ff0a757f34fee',
+        yandexOrgId: '3502018',
     },
     motion: {
         directives: {

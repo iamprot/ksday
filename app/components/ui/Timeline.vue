@@ -14,18 +14,30 @@ const events = [
     },
     {
         time: "16:00",
-        title: "Кейсы заказчиков",
+        title: "Кейсы заказчиков, часть 1",
         description:
-            "Практика внедрений в FMCG, металлургии, ритейле и других отраслях.",
+            "Практика внедрений в промышленности и металлургии.",
         badge: "Программа в разработке",
     },
     {
+        time: "17:30",
+        title: "Кофе–брейк",
+        description: null,
+    },
+    {
         time: "18:00",
-        title: "Награждение лучших проектов",
+        title: "Кейсы заказчиков, часть 2",
+        description:
+            "Практика внедрений в FMCG, ритейле и других отраслях.",
+        badge: "Программа в разработке",
+    },
+    {
+        time: "19:00",
+        title: "Церемония награждения",
         description: "Церемония KS Awards.",
     },
     {
-        time: "18:30",
+        time: "19:30",
         title: "Банкет и нетворкинг",
         description:
             "Неформальное общение с коллегами и командой Knowledge Space до 22:00.",
@@ -38,7 +50,7 @@ const events = [
         <div
             v-for="(event, idx) in events"
             :key="idx"
-            class="flex flex-col md:flex-row py-6 gap-2 md:gap-20 items-start md:items-center border-b last:border-0 border-slate-500/20"
+            class="grid grid-rows-1 md:grid-cols-4 py-6 gap-2 md:gap-20 items-start md:items-center border-b last:border-0 border-slate-500/20"
             v-motion-pop-bottom
             :delay="idx * 100"
         >
@@ -47,7 +59,7 @@ const events = [
             >
                 {{ event.time }}
             </div>
-            <div class="flex flex-col gap-5">
+            <div class="flex flex-col gap-5 md:col-span-3">
                 <div
                     class="text-dark dark:text-white font-medium text-2xl flex gap-4 items-center"
                 >
