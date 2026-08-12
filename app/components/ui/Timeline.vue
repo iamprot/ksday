@@ -25,7 +25,7 @@ const events = [
         description: null,
     },
     {
-        time: "18:00",
+        time: "17:45",
         title: "Кейсы заказчиков, часть 2",
         description:
             "Практика внедрений в FMCG, ритейле и других отраслях.",
