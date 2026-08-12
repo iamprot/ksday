@@ -22,7 +22,7 @@ const scrollToSection = (id: string) => {
                 </div>
             </div>
             <div class="flex flex-col items-center shrink-0">
-                <div class="flex flex-col gap-4 text-white/70">
+                <div class="flex flex-col gap-4 text-white/70 text-center md:text-left">
                     <span
                         class="hover:text-white hover:cursor-pointer transition-all duration-300 ease-in"
                         @click="scrollToSection('about')"
@@ -45,7 +45,7 @@ const scrollToSection = (id: string) => {
                     >
                 </div>
             </div>
-            <div class="flex flex-col gap-5">
+            <div class="flex flex-col gap-5 items-center md:items-start">
                 <div class="flex flex-row gap-2">
                     <Icon
                         name="solar:map-point-linear"
@@ -80,7 +80,7 @@ const scrollToSection = (id: string) => {
             class="flex flex-row w-full max-w-7xl justify-between text-sm text-white/40"
         >
             <span>&copy; 2026 Knowledge Space.<br />Все права защищены.</span>
-            <span class="text-right">KS Day 2026 · 30 сентября · Москва</span>
+            <span class="text-right">KS Day 2026 / 30 сентября / Москва</span>
         </div>
     </footer>
 </template>
