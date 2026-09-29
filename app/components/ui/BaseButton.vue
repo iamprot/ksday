@@ -1,7 +1,7 @@
 <script setup lang="ts">
 interface Props {
     label?: string;
-    variant?: "primary" | "secondary";
+    variant?: "primary" | "secondary" | "disabled";
     type?: "button" | "submit" | "reset";
     disabled?: boolean;
     loading?: boolean;
@@ -21,7 +21,9 @@ const variantClasses = computed(() => {
     const variants = {
         primary: "bg-accent dark:bg-primary dark:hover:bg-accent text-white hover:bg-primary focus:ring-accent",
         secondary:
-            "bg-white dark:bg-gray-800/30 ring-1 ring-gray-300 dark:ring-gray-500/50 backdrop-blur-xl text-primary dark:text-white/80 hover:bg-[#F1F6FF] dark:hover:bg-gray-800 focus:ring-accent",
+            "bg-white dark:bg-gray-800/30 ring-1 ring-gray-300 dark:ring-gray-500/50 backdrop-blur-xl text-primary dark:text-white/80 hover:bg-[#F1F6FF] dark:hover:bg-gray-800 focus:ring-accent cursor-pointer",
+        disabled:
+            "bg-white ring-1 ring-gray-300 dark:bg-gray-900 dark:ring-gray-700 text-gray-300 dark:text-gray-700 cursor-arrow"
     };
     return variants[props.variant];
 });
@@ -42,7 +44,7 @@ const sizeClasses = computed(() => {
         :disabled="disabled || loading"
         :class="[
             'inline-flex items-center justify-center rounded-full',
-            'transition-all duration-300 hover:cursor-pointer',
+            'transition-all duration-300',
             variantClasses,
             sizeClasses
         ]"

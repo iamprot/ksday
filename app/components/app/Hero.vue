@@ -74,10 +74,12 @@ const scrollToSection = (id: string) => {
                     class="z-1 flex flex-col w-full md:flex-row gap-4 md:gap-6 justify-center md:justify-start"
                 >
                     <UiBaseButton
+                        variant="disabled"
                         label="Зарегистрироваться"
                         @click="scrollToSection('contact')"
                         v-motion-pop-bottom
                         :delay="200"
+                        disabled
                     />
                     <UiBaseButton
                         label="Подробнее о событии"

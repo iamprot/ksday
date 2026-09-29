@@ -30,11 +30,12 @@ const scrollToSection = (id: string) => {
                     >
                 </div>
             </a>
-            <UiBaseButton
+            <!-- <UiBaseButton
                 label="Зарегистрироваться"
                 @click="scrollToSection('contact')"
                 size="small"
-            />
+                disabled
+            /> -->
             <UiColorModeButton />
         </nav>
     </div>
